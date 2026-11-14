@@ -65,7 +65,7 @@ All 5 sizes are always generated. No platform question asked.
 
 ### Research Stack
 - **Step 1:** Extract 3-5 pain keywords from the hook/idea
-- **Step 2:** Search Reddit CSV (Title, Content, Keywords columns) at `/Users/virgilbrewster/My Drive/Sucana/automations/Reddit-Monitoring/latest-scrape.csv`
+- **Step 2:** Search Reddit CSV (Title, Content, Keywords columns) at `/Users/virgilbrewster/My Drive/Business/automations/Reddit-Monitoring/latest-scrape.csv`
 - **Step 3 (fallback):** If CSV missing or no relevant matches, web search Reddit threads about the pain point
 - **How research shapes prompts:** Directly informs `mood`, `subject.action`, and `setting.location` in the JSON prompt
 - **Meta Ad Library** — hidden option. Only activates if user explicitly says "also check Meta." Not offered by default.

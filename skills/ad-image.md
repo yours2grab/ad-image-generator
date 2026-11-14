@@ -4,7 +4,7 @@
 
 ## Project Root
 All files for this skill live at:
-`/Users/virgilbrewster/My Drive/Sucana/Sucana/Sucana Agents/Ad Image Generator/`
+`/Users/virgilbrewster/My Drive/Agents/Ad Image Generator/`
 
 When reading or writing any file, always use this absolute path as the base.
 
@@ -40,7 +40,7 @@ Run research silently for all paths. Never show research output to the user.
 **1. Extract keywords:** From the hook, idea, or ad description, pull 3-5 pain-related keywords (e.g., "burnout," "overwhelmed," "behind on deadlines").
 
 **2. Search the Reddit CSV:**
-File: `/Users/virgilbrewster/My Drive/Sucana/automations/Reddit-Monitoring/latest-scrape.csv`
+File: `/Users/virgilbrewster/My Drive/Business/automations/Reddit-Monitoring/latest-scrape.csv`
 Search the Title, Content, and Keywords columns for your extracted keywords. Pull real language, real frustrations, real scenes people describe.
 
 **3. If the CSV is missing, has no matches, or matches are only tangentially related (not about the specific pain in the hook):** Fall back to web search. Search for Reddit threads about the pain point (e.g., `site:reddit.com "burnout" "can't keep up"`). Pull the same thing: real words, real frustrations, real scenes from actual people.
@@ -114,12 +114,12 @@ Always vary across gender, ethnicity, age, and environment. Never repeat the sam
    - `aspectRatio`: "9:16"
 4. Copy the generated image from Nano Banana's output path to the correct location:
    ```bash
-   cp "[nano-banana-output-path]" "/Users/virgilbrewster/My Drive/Sucana/Sucana/Sucana Agents/Ad Image Generator/images/[subdirectory]/YYYY-MM-DD_style-type_hook-slug_1080x1920.png"
+   cp "[nano-banana-output-path]" "/Users/virgilbrewster/My Drive/Agents/Ad Image Generator/images/[subdirectory]/YYYY-MM-DD_style-type_hook-slug_1080x1920.png"
    ```
 
 **Step 6b — Crop to 1:1 preview (local, no API):**
 ```bash
-cd "/Users/virgilbrewster/My Drive/Sucana/Sucana/Sucana Agents/Ad Image Generator"
+cd "/Users/virgilbrewster/My Drive/Agents/Ad Image Generator"
 python3 scripts/generate.py "prompts/[subdirectory]/YYYY-MM-DD_style-type_hook-slug_1080x1080.json" --resize "images/[subdirectory]/YYYY-MM-DD_style-type_hook-slug_1080x1920.png"
 ```
 
@@ -151,7 +151,7 @@ Then ask:
 
 **Step 8a — Crop Square and Feed from master (local, no API):**
 ```bash
-cd "/Users/virgilbrewster/My Drive/Sucana/Sucana/Sucana Agents/Ad Image Generator"
+cd "/Users/virgilbrewster/My Drive/Agents/Ad Image Generator"
 python3 scripts/generate.py "prompts/[sub]/YYYY-MM-DD_style_slug_1080x1080.json" --resize "images/[sub]/YYYY-MM-DD_style_slug_1080x1920.png"
 python3 scripts/generate.py "prompts/[sub]/YYYY-MM-DD_style_slug_1080x1350.json" --resize "images/[sub]/YYYY-MM-DD_style_slug_1080x1920.png"
 ```
